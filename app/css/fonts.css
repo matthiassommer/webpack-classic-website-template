@@ -51,7 +51,7 @@
     font-family: 'Source Sans Pro';
     font-style: italic;
     font-weight: 600;
-    src: local('Source Sans Pro Semibold Italic'), local('SourceSansPro-SemiboldIt'), url(../font/SourceSansPro-SemiboldItalic.ttf) format('woff');
+    src: local('Source Sans Pro Semibold Italic'), local('SourceSansPro-SemiboldIt'), url(../font/SourceSansPro-SemiboldItalic.woff) format('woff');
 }
 
 @font-face {

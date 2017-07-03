@@ -1,8 +1,11 @@
 export function init() {
-    alert("This works! :-)");
+    testjQueryUIDialog();
     exposeGlobally();
 }
 
+/**
+ * Expose modules, variables, or methods for other librariees via the browser's window object.
+ */
 function exposeGlobally() {
     window.functionToExpose = functionToExpose;
 }
@@ -11,6 +14,9 @@ function functionToExpose() {
     alert("exposed");
 }
 
+/**
+ * Example how jQuery UI can be used.
+ */
 function testjQueryUIDialog() {
     $("#content").dialog({
         resizable: true,
@@ -24,7 +30,7 @@ function testjQueryUIDialog() {
             }
         },
         open(event, ui) {
-            $(this).html("I am a dialog!");
+            $(this).html("<i class='fa fa-check'></i>" + "Congratulations! You're setup is successful :-)");
         }
     }).dialog("open");
 }

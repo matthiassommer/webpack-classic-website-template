@@ -10,9 +10,20 @@ body {
     flex-direction: column;
 }
 
+header {
+    flex-shrink: 0;
+    height: 120px;
+}
+
 main {
     flex: 1 0 auto;
     padding-top: 15px;
+}
+
+footer {
+    flex-shrink: 0;
+    height: 188px;
+    background-image: url('../images/lock.png');
 }
 
 @media screen and (max-width: 800px) {}
