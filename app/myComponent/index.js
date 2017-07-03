@@ -1,3 +1,5 @@
+import "./styles.css";
+
 export function init() {
     testjQueryUIDialog();
     exposeGlobally();
