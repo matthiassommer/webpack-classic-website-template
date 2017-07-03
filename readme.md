@@ -1,7 +1,7 @@
 webpack-classic-website-template
 ======
 
-A website template for [Webpack] (https://github.com/webpack/webpack).
+A website template for [Webpack](https://github.com/webpack/webpack).
 
 ## Description
 
@@ -37,4 +37,8 @@ After running Webpack, the distribution folder has this structure:
 * To build the project for production execute
     <pre>npm run dist</pre>
     Runs webpack.prod.config.js with UglifyJs, OccurrenceOrderPlugin, and AggressiveMergingPlugin to compress file size.
+
+
+## License
+[MIT](http://www.opensource.org/licenses/mit-license)
 
