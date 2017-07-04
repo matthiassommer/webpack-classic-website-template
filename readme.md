@@ -7,20 +7,22 @@ A website template for [Webpack](https://github.com/webpack/webpack).
 
 This template is designed to migrate a classic website layout to be used with Webpack. In contrast to other setups, the main entry point will be an index.html. All JS code will be bundled into a single bundle.js which is automatically added to the index.html to be imported. All your CSS files will also be bundled into a single styles.css file.
 
-* You can program in ECMAScript 2015. 
+* You can program using the latest features of JavaScript (e.g. ES6 and ES7). 
 * Babel migrates it to CommonJS for use in the browser. 
-* Additional, a polyfill is automatically added for older browsers. 
-* ESLint checks your code style and validates your code during compiling.
+* Additional, a polyfill is added for support of browsers. 
+* ESLint checks your code style and looks for problematic patterns during compiling.
 * [HandlebarsJS](http://handlebarsjs.com) is used to decouple HTML snippets from the JS code
+* jQuery and jQueryUI for HTML document manipulation, event handling, and user interface interactions.
 
-There is a config file for development with Hot Module Reload, as well as a distribution file for production with several plugins for optimisation purposes.
+There is a config file for development with Hot Module Reload, and a distribution file for production with several plugins for optimisation purposes.
 
 After running Webpack, the distribution folder has this structure:
-- fonts/
-- images/
-- bundle.js
-- index.html
-- styles.css
+dist
+|-- fonts/
+|-- images/
+|-- bundle.js
+|-- index.html
+|-- styles.css
 
 
 ## Installation
