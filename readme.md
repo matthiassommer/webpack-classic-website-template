@@ -11,6 +11,7 @@ This template is designed to migrate a classic website layout to be used with We
 * Babel migrates it to CommonJS for use in the browser. 
 * Additional, a polyfill is automatically added for older browsers. 
 * ESLint checks your code style and validates your code during compiling.
+* [HandlebarsJS](http://handlebarsjs.com) is used to decouple HTML snippets from the JS code
 
 There is a config file for development with Hot Module Reload, as well as a distribution file for production with several plugins for optimisation purposes.
 
@@ -23,7 +24,7 @@ After running Webpack, the distribution folder has this structure:
 
 
 ## Installation
-1. Install Node.js https://nodejs.org/en/download/
+1. Download Node.js from https://nodejs.org/en/download/ and install it.
 
 2. To install packages execute 
    <pre>npm install</pre>
