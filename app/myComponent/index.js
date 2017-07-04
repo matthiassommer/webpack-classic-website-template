@@ -1,8 +1,10 @@
 import "./styles.css";
+const testTemplate = require("./test-template.hbs");
 
 export function init() {
     testjQueryUIDialog();
     exposeGlobally();
+    window.functionToExpose();
 }
 
 /**
@@ -13,7 +15,8 @@ function exposeGlobally() {
 }
 
 function functionToExpose() {
-    alert("exposed");
+    const template = testTemplate({ text: "Expose Handlebars template!" });
+    alert($(template));
 }
 
 /**

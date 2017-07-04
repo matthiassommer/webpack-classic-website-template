@@ -15,53 +15,52 @@ module.exports = {
     },
 
     module: {
-        rules: [
-            {
-                test: /\.css$/,
-                use: ExtractTextPlugin.extract({fallback: "style-loader", use: "css-loader"})
+        rules: [{
+            test: /\.css$/,
+            use: ExtractTextPlugin.extract({ fallback: "style-loader", use: "css-loader" })
 
-            }, {
-                test: /\.(jpe?g|png|gif)$/i,
-                loader: "file-loader",
-                query: {
-                    name: '[name].[ext]',
-                    outputPath: 'images/'
-                }
-            }, {
-                enforce: "pre",
-                test: /\.js$/,
-                exclude: /node_modules/,
-                loader: "eslint-loader"
-            }, {
-                test: /\.js$/,
-                exclude: /(node_modules)/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: [
-                            [
-                                'env', {
-                                    "targets": {
-                                        "ie": 11
-                                    }
-                                }
-                            ]
-                        ]
-                    }
-                }
-            }, {
-                test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name].[ext]',
-                            outputPath: 'fonts/'
-                        }
-                    }
-                ]
+        }, {
+            test: /\.(jpe?g|png|gif)$/i,
+            loader: "file-loader",
+            query: {
+                name: '[name].[ext]',
+                outputPath: 'images/'
             }
-        ]
+        }, {
+            enforce: "pre",
+            test: /\.js$/,
+            exclude: /node_modules/,
+            loader: "eslint-loader"
+        }, {
+            test: /\.js$/,
+            exclude: /(node_modules)/,
+            use: {
+                loader: 'babel-loader',
+                options: {
+                    presets: [
+                        [
+                            'env', {
+                                "targets": {
+                                    "ie": 11
+                                }
+                            }
+                        ]
+                    ]
+                }
+            }
+        }, {
+            test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+            use: [{
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                    outputPath: 'fonts/'
+                }
+            }]
+        }, {
+            test: /\.hbs$/,
+            loader: "handlebars-loader"
+        }]
     },
 
     resolve: {
@@ -69,31 +68,31 @@ module.exports = {
     },
 
     plugins: [
-        new webpack.ProvidePlugin({$: "jquery", jQuery: "jquery", "window.jQuery": "jquery'", "window.$": "jquery"}),
+        new webpack.ProvidePlugin({ $: "jquery", jQuery: "jquery", "window.jQuery": "jquery'", "window.$": "jquery" }),
         new webpack
-            .optimize
-            .UglifyJsPlugin({
-                mangle: {
-                    keep_fnames: true
-                },
-                compress: {
-                    warnings: false,
-                    comparisons: false
-                },
-                comments: false
-            }),
+        .optimize
+        .UglifyJsPlugin({
+            mangle: {
+                keep_fnames: true
+            },
+            compress: {
+                warnings: false,
+                comparisons: false
+            },
+            comments: false
+        }),
         new webpack
-            .optimize
-            .OccurrenceOrderPlugin(),
+        .optimize
+        .OccurrenceOrderPlugin(),
         new webpack
-            .optimize
-            .AggressiveMergingPlugin(),
+        .optimize
+        .AggressiveMergingPlugin(),
         new webpack.DefinePlugin({
             'process.env': {
                 'NODE_ENV': JSON.stringify('production')
             }
         }),
         new ExtractTextPlugin('styles.css'),
-        new HtmlWebpackPlugin({template: './app/index.html'})
+        new HtmlWebpackPlugin({ template: './app/index.html' })
     ]
 };
