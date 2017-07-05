@@ -17,7 +17,9 @@ This template is designed to migrate a classic website layout to be used with We
 There is a config file for development with Hot Module Reload, and a distribution file for production with several plugins for optimisation purposes.
 
 After running Webpack, the distribution folder has this structure:
+
 dist
+
 |-- fonts/
 
 |-- images/
