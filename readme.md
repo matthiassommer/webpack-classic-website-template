@@ -5,7 +5,7 @@ A website template for [Webpack](https://github.com/webpack/webpack).
 
 ## Description
 
-This template is designed to migrate a classic website layout to be used with Webpack. In contrast to other setups, the main entry point will be an index.html. All JS code will be bundled into a single bundle.js which is automatically added to the index.html to be imported. All your CSS files will also be bundled into a single styles.css file.
+This template is designed to migrate a classic website layout to be used with Webpack. In contrast to other setups, the main entry point will be an index.html. 
 
 * You can program using the latest features of JavaScript (e.g. ES6 and ES7). 
 * Babel migrates it to CommonJS for use in the browser. 
@@ -19,11 +19,16 @@ There is a config file for development with Hot Module Reload, and a distributio
 After running Webpack, the distribution folder has this structure:
 dist
 |-- fonts/
+
 |-- images/
+
 |-- bundle.js
+
 |-- index.html
+
 |-- styles.css
 
+All JS code will be bundled into a single bundle.js which is automatically added to the index.html to be imported. All your CSS files will also be bundled into a single styles.css file.
 
 ## Installation
 1. Download Node.js from https://nodejs.org/en/download/ and install it.
